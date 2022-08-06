@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+<title>Machine Learning Lab Experiment Deployment</title>
+<meta charset="UTF-8">
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> 
+<style><!DOCTYPE html>
+
+h1 {text-align: center;}
+h2 {text-align: center;}
+h3 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+</style>
+</head>
+
+<body>
+ 
+     
+<div class="" style="background-color:blue;" >
+<div class="clearfix">
+           
+<div class="col-md-12">
+<center><p style="font-size:40px;color:white;margin-top:10px;">Summer Internship 2022</p></center> 
+<center><p style="font-size:30px;color:white;margin-top:10px;">Department of Computer Engineering</p></center> 
+<center><p style="font-size:25px;color:white;margin-top:10px;">Placement prediction using machine learning</p></center> 
+</div>
+</div>
+</div>
+
+<div class="login">
+<h2 >Student placement prediction </h2>
+<h4>Made by Yash Sankhla</h4>
+<!-- Main Input For Receiving Query to our ML -->
+<form action="{{ url_for('predict')}}"method="get">
+<div class="form-floating mb-3">
+
+<input type="number" class="form-control" id="ten" name="ten" step="any" min="1" max="100" placeholder="0" required="required">
+<label for="floatingInput">Enter 10th percentage</label>
+</div>
+<br>
+<div class="form-floating mb-3">
+<input type="number" class="form-control" id="tw" name="tw" step="any" min="0" max="100" placeholder="0" required="required">
+<label for="floatingInput">Enter 12th percentage</label>
+</div>
+<br>
+<div class="form-floating mb-3">
+<input type="number" class="form-control" id="bt" name="bt" step="any" min="0" max="100" placeholder="0" required="required">
+<label for="floatingInput">Enter B.Tech Percentage</label>
+</div>
+<br>
+<div class="form-floating mb-3">
+<input type="number" class="form-control" id="seven" name="seven" step="any" min="0" max="100" placeholder="0" required="required">
+<label for="floatingInput">Enter 7th percentage</label>
+</div>
+<br>
+<div class="form-floating mb-3">
+<input type="number" class="form-control" id="six" name="six" step="any" min="0" max="100" placeholder="0" required="required">
+<label for="floatingInput">Enter 6th percentage</label>
+</div>
+<br>
+<div class="form-floating mb-3">
+<input type="number" class="form-control" id="five" name="five" step="any" min="0" max="100" placeholder="0" required="required">
+<label for="floatingInput">Enter 5th percentage</label>
+</div>
+<br>
+<div class="form-floating mb-3">
+<input type="number" class="form-control" id="final" name="final" step="any" min="0" max="100" placeholder="0" required="required">
+<label for="floatingInput">Enter final performance percentage</label>
+</div>
+<br>
+<div class="form-floating mb-3">
+<input type="number" class="form-control" id="medium" name="medium" step="any" min="1" max="2" placeholder="0" required="required">
+<label for="floatingInput">Enter Medium 1 or 2</label>
+</div>
+<br>
+<div class="form-floating mb-3">
+<input type="number" class="form-control" id="pack" name="pack" step="any" min="0" max="100" placeholder="0" required="required">
+<label for="floatingInput">Enter Package</label>
+</div>
+<br>
+
+<br>
+<button type="submit" class="btn btn-primary btn-block btn-large" value="rf" name="rf">Prediction by RandomForest Model</button>
+<button type="submit" class="btn btn-primary btn-block btn-large" value="gb" name="gb">Prediction by GaussianNB Model</button>
+<button type="submit" class="btn btn-primary btn-block btn-large" value="lr" name="lr">Prediction by Logistic Regression Model</button>
+<button type="submit" class="btn btn-primary btn-block btn-large" value="dt" name="dt">Prediction by Decision Tree Model</button>
+<button type="submit" class="btn btn-primary btn-block btn-large" value="svm" name="svcl">Prediction by SVM Model</button>
+</form>
+<br>
+<br>
+{{ prediction_text }}
+
+</div>
+
+<div class="" style="background-color:blue;" >
+<div class="clearfix">
+           
+<div class="col-md-12">
+ <center><p style="font-size:25px;color:white;margin-top:20px;">Summer internship project 4 </p></center> 
+</div>
+</div>
+</div>
+</body>
+</html>
